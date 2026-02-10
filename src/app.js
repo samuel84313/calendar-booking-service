@@ -10,6 +10,11 @@ app.use(express.json());
 app.get("/health", (req, res) => {
   res.status(200).json({ message: "Server is running" });
 });
+app.get("/", (req, res) => {
+  res.status(200).json({
+    message: "Calendar Booking Service is Live"
+  });
+});
 
 app.use("/users", userRoutes);
 app.use("/meetings", meetingRoutes);
