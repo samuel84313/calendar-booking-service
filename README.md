@@ -51,52 +51,6 @@ If conflict is detected, the API returns:
 "Time slot already booked"
 
 
-This ensures no double booking of meeting slots.
-
-📌 API Endpoints
-👤 Users
-
-Create User
-
-POST /users
-
-
-Get User by ID
-
-GET /users/:id
-
-📅 Meetings
-
-Create Meeting
-
-POST /meetings
-
-
-List Meetings
-
-GET /meetings
-
-
-Filter by user:
-
-GET /meetings?userId=1
-
-
-Get Meeting by ID
-
-GET /meetings/:id
-
-
-Update Meeting
-
-PUT /meetings/:id
-
-
-Delete Meeting
-
-DELETE /meetings/:id
-
-
 🌍 Live Deployment
 
 Live Application URL:
