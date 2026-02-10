@@ -1,0 +1,23 @@
+require("dotenv").config();
+const app = require("./app");
+const sequelize = require("./config/database");
+
+const PORT = process.env.PORT || 3000;
+
+async function startServer() {
+  try {
+    await sequelize.authenticate();
+    console.log("Database connected");
+
+    await sequelize.sync(); // For local development only
+    console.log("Models synchronized");
+
+    app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
+    });
+  } catch (err) {
+    console.error("Startup error:", err);
+  }
+}
+
+startServer();
